@@ -1,5 +1,5 @@
 // Import the functions you need from the SDKs you need
-import firebase from 'firebase/app';
+import { firebase } from 'firebase/app';
 import 'firebase/firestore';
 
 const firebaseConfig = {
@@ -9,7 +9,7 @@ const firebaseConfig = {
     storageBucket: "fb-bdreact1-70ba1.appspot.com",
 };
 
-const fb = firebase.initializeApp(firebaseConfig);
+const app = firebase.initializeApp(firebaseConfig);
 
-export const db = fb.Firestore();
+export const db = app.Firestore();
 
