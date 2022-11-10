@@ -1,6 +1,6 @@
 // Import the functions you need from the SDKs you need
-import firebase from 'firebase/app';
-import 'firebase/firestore';
+import { initializeApp } from "firebase/app";
+import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
     apiKey: 'AIzaSyBj3Z6nBhTYwU50MPrCtknXAsWzybIt1Us',
@@ -9,7 +9,7 @@ const firebaseConfig = {
     storageBucket: "fb-bdreact1-70ba1.appspot.com",
 };
 
-const app = firebase.initializeApp(firebaseConfig);
-
-export const db = app.Firestore();
+const app = initializeApp(firebaseConfig);
+export const db =getFirestore();
+export default app;
 
